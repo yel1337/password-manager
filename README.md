@@ -1,4 +1,4 @@
-# password-manager
+# Description
 
   The project sole purpose is to learn the ins and outs of software development cycle. 
   
