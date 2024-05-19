@@ -21,13 +21,32 @@ int main()
 		temp[i] = pass[i]; 
 		if(i == strlen(pass) -2)
 		{
-			for(int j = 1; j <= strlen(pass) - 2; j++)
+			for(int j = 1; j <= 1; j++)
 			{
 				comb[0] = pass[0];
 				comb[strlen(pass) - 1] = pass[strlen(pass) - 1];
-				comb[j] = '*';
 
-				printf("%c\n", comb);
+				for(int k = 0; k <= strlen(pass) - 1; k++)
+				{
+					if(k == 0)
+					{
+						comb[k] = pass[0];
+
+						printf("%c", comb[k]);
+					} 
+					else if(k >= 1 && k != strlen(pass) - 1)
+					{
+						comb[k] = '*';
+
+						printf("%c", comb[k]);
+					}
+					else
+					{
+						comb[k] = pass[7];
+
+						printf("%c", comb[k]);
+					}
+				}
 			}
 		}	
 	}
