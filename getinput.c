@@ -9,12 +9,8 @@ int main()
 	int x,y;
 	y = strlen(pass) - 2;  // Password length without first and last index
 	x = strlen(pass) - 1; 
-	char sort[2] = ""; 
 	char temp[y];
-	char comb[strlen(pass)];
-
-	sort[0] = pass[0];
-	sort[1] = pass[x];
+	char comb[strlen(pass)]; // Array were asterisked characters and excemption characters are stored 
 
 	for(int i = 1; i <= strlen(pass) - 2; i++)
 	{
@@ -42,9 +38,15 @@ int main()
 					}
 					else
 					{
-						comb[k] = pass[7];
+						comb[k] = pass[strlen(pass) - 1];
 
 						printf("%c", comb[k]);
+					}
+
+					if (k == strlen(pass) - 1)
+					{
+						k + 1;
+						printf("\n", comb[k]); 
 					}
 				}
 			}
